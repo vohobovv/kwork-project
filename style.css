@@ -1,0 +1,4 @@
+.list-header:hover {
+	color: #18b9e7;
+	transition: all 2s ease;
+}
