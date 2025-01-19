@@ -4,28 +4,35 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./hamburger.css">
 	<link rel="stylesheet" href="./style.css">
 	<script src="https://cdn.tailwindcss.com"></script>
 	<title>База Знаний</title>
 </head>
 
 <body>
-	<header style="box-shadow: 0px 4px 24.2px 0px #0000000F;" class="pt-5 lg:pt-6 pb-5 lg:pb-6" id="header">
-		<div class="max-w-[1312px] ml-auto mr-auto flex items-center pl-4 pr-4">
-			<a href="./index.html" class="flex items-center font-bold text-[18px] leading-3">
-				<img class="max-w-[70px] lg:max-w-[100px]" src="./images/header/logo.png" alt="header logo"> Станции и Узлы
+	<header style="box-shadow: 0px 4px 24.2px 0px #0000000F;" class="bg-white pt-5 lg:pt-6 pb-5 lg:pb-6" id="header">
+		<nav class="navbar max-w-[1312px] ml-auto mr-auto flex items-center pl-4 pr-4">
+			<a href="./index.html" class="nav-branding flex items-center font-bold text-[18px] leading-3">
+				<img class="max-w-[70px] md:max-w-[100px]" src="./images/header/logo.png" alt="header logo"> Станции и Узлы
 			</a>
 
-			<ul class="hidden lg:flex gap-12 ml-auto ">
-				<li><a class="list-header font-semibold text-sm leading-5 text-[#2c2b35]" href="./stations.html">Станции </a>
+			<ul class="nav-menu">
+				<li class="nav-item"><a class="nav-link font-semibold text-sm leading-5 text-[#2c2b35]" href="./stations.html">Станции </a>
 				</li>
-				<li><a class="list-header font-semibold text-sm leading-5 text-[#2c2b35]" href="./uzli.html">Узлы </a>
+				<li class="nav-item"><a class="nav-link font-semibold text-sm leading-5 text-[#2c2b35]" href="./uzli.html">Узлы </a>
 				</li>
-				<li><a class="list-header font-semibold text-sm leading-5 text-[#2c2b35]" href="./knowledge-base.html">База
+				<li class="nav-item"><a class="nav-link font-semibold text-sm leading-5 text-[#2c2b35]" href="./knowledge-base.html">База
 						знаний</a></li>
-				<li><a class="list-header font-semibold text-sm leading-5 text-[#2c2b35]" href="./test.html">Тест</a></li>
+				<li class="nav-item"><a class="nav-link font-semibold text-sm leading-5 text-[#2c2b35]" href="./test.html">Тест</a></li>
 			</ul>
-		</div>
+
+				<div class="hamburger">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+		</nav>
 	</header>
 
 	<main>
@@ -205,179 +212,233 @@
 			</div>
 	</section>
 
-		<section class="pb-[120px] py-[60px]">
-			<div class="max-w-[1351px] mx-auto px-5">
-				<h2 class="font-semibold text-xl md:text-[32px] leading-7 md:leading-[44px] text-[#3D4641] mb-8 md:mb-[60px]">
-					Ответы на вопросы</h2>
-				<ul class="grid gap-2.5 md:gap-5 mb-2.5 md:mb-5">
-					<li class="py-3 md:py-5 px-5 md:px-10 rounded-[20px] md:rounded-[40px]"
-						style="box-shadow: 0px 4px 12px 0px #0000000D;">
-						<div id="faqTop" class="flex items-center justify-between pb-0">
-							<h3 class="font-semibold text-sm md:text-xl leading-5 md:leading-7 text-[#3D4641]">Какие бывают типы
-								станций?</h3>
-							<button id="faqBtn" class="w-10 h-10 flex items-center justify-center rotate-180"><img
-									src="./images/faq/open-close.svg	" alt="Open and Close"></button>
-						</div>
-						<div id="faqContainer" class="hidden">
-							<p class="font-semibold text-[14px] md:text-[18px] leading-4 md:leading-5 text-[#6F7973]">Станции делятся
-								на несколько типов в зависимости от их функций:</p>
-							<br>
-							<ul class="list-disc pl-5">
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Пассажирские
-									станции: обслуживают пассажиров. Это могут быть вокзалы в крупных городах или остановочные пункты в
-									небольших населённых пунктах. У них есть залы ожидания, кассы, платформы и другие удобства для
-									пассажиров.</li>
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Грузовые станции:
-									занимаются обработкой грузов. Здесь располагаются грузовые терминалы, складские площадки, краны для
-									погрузки/разгрузки вагонов.</li>
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Сортировочные
-									станции: предназначены для формирования новых составов. В них вагоны сортируются по назначению и
-									объединяются в составы для отправки в нужные направления.</li>
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Технические
-									станции: обеспечивают обслуживание и ремонт подвижного состава, а также заправку топливом, водой и
-									проверку безопасности.</li>
-							</ul>
-						</div>
-					</li>
-					<li class="py-3 md:py-5 px-5 md:px-10 rounded-[20px] md:rounded-[40px]"
-						style="box-shadow: 0px 4px 12px 0px #0000000D;">
-						<div id="faqTop" class="flex items-center justify-between pb-0">
-							<h3 class="font-semibold text-sm md:text-xl leading-5 md:leading-7 text-[#3D4641]">Что такое транспортный
-								узел?</h3>
-							<button id="faqBtn" class="w-10 h-10 flex items-center justify-center rotate-180"><img
-									src="./images/faq/open-close.svg	" alt="Open and Close"></button>
-						</div>
-						<div id="faqContainer" class="hidden">
-							<ul class="list-disc pl-5">
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Транспортный узел —
-									это место, где пересекаются или взаимодействуют несколько видов транспорта (например, железнодорожный,
-									автомобильный, морской, воздушный). Такие узлы играют ключевую роль в логистике, позволяя быстро
-									перераспределять пассажиров и грузы.</li>
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Примеры: аэропорт с
-									железнодорожной станцией и автомобильной магистралью, морской порт с подключением к железной дороге и
-									автотранспорту.</li>
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Важно, чтобы узел
-									имел развитую инфраструктуру: складские зоны, транспортные терминалы, подъездные пути, что позволяет
-									эффективно управлять потоками грузов и пассажиров.</li>
-							</ul>
-						</div>
-					</li>
-					<li class="py-3 md:py-5 px-5 md:px-10 rounded-[20px] md:rounded-[40px]"
-						style="box-shadow: 0px 4px 12px 0px #0000000D;">
-						<div id="faqTop" class="flex items-center justify-between pb-0">
-							<h3 class="font-semibold text-sm md:text-xl leading-5 md:leading-7 text-[#3D4641]">Как осуществляется
-								управление движением поездов на станции?</h3>
-							<button id="faqBtn" class="w-10 h-10 flex items-center justify-center rotate-180"><img
-									src="./images/faq/open-close.svg	" alt="Open and Close"></button>
-						</div>
-						<div id="faqContainer" class="hidden">
-							<p class="font-semibold text-[14px] md:text-[18px] leading-4 md:leading-5 text-[#6F7973]">Управление
-								движением происходит с использованием современных технологий:</p>
-							<br>
-							<ul class="list-disc pl-5">
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Сигнальные системы:
-									автоматические светофоры показывают машинистам, можно ли двигаться дальше.</li>
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Диспетчеризация: на
-									крупных станциях есть диспетчерские пункты, где специалисты следят за движением поездов в реальном
-									времени и координируют их действия.</li>
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Автоматизированные
-									системы управления движением (АСУД): такие системы помогают диспетчерам принимать решения быстрее,
-									обрабатывая данные о состоянии путей, графиках поездов и их местоположении.</li>
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Радиосвязь:
-									используется для передачи команд между машинистами, диспетчерами и техническими службами.</li>
-							</ul>
-						</div>
-					</li>
-					<li class="py-3 md:py-5 px-5 md:px-10 rounded-[20px] md:rounded-[40px]"
-						style="box-shadow: 0px 4px 12px 0px #0000000D;">
-						<div id="faqTop" class="flex items-center justify-between pb-0">
-							<h3 class="font-semibold text-sm md:text-xl leading-5 md:leading-7 text-[#3D4641]">Что такое узловая
-								станция, и чем она отличается от обычной?</h3>
-							<button id="faqBtn" class="w-10 h-10 flex items-center justify-center rotate-180"><img
-									src="./images/faq/open-close.svg	" alt="Open and Close"></button>
-						</div>
-						<div id="faqContainer" class="hidden">
-							<p class="font-semibold text-[14px] md:text-[18px] leading-4 md:leading-5 text-[#6F7973]">Узловая станция
-								— это железнодорожная станция, через которую проходят линии из нескольких направлений.</p>
-							<br>
-							<p class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Она отличается от
-								обычной тем, что на ней происходит:</p>
-							<ul class="list-disc pl-5">
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">
-									Сортировка вагонов для различных маршрутов.</li>
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Пересадка
-									пассажиров между разными поездами.</li>
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Перераспределение
-									грузов для дальнейшей доставки.</li>
-							</ul>
-						</div>
-					</li>
-					<li class="py-3 md:py-5 px-5 md:px-10 rounded-[20px] md:rounded-[40px]"
-						style="box-shadow: 0px 4px 12px 0px #0000000D;">
-						<div id="faqTop" class="flex items-center justify-between pb-0">
-							<h3 class="font-semibold text-sm md:text-xl leading-5 md:leading-7 text-[#3D4641]">Как организуется
-								пересадка пассажиров в транспортных узлах?</h3>
-							<button id="faqBtn" class="w-10 h-10 flex items-center justify-center rotate-180"><img
-									src="./images/faq/open-close.svg	" alt="Open and Close"></button>
-						</div>
-						<div id="faqContainer" class="hidden">
-							<p class="font-semibold text-[14px] md:text-[18px] leading-4 md:leading-5 text-[#6F7973]">Пересадка
-								организуется так, чтобы минимизировать время ожидания и сделать процесс удобным:</p>
-							<br>
-							<ul class="list-disc pl-5">
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">На крупных узловых
-									станциях платформы обычно располагаются рядом, а переход между ними осуществляется по подземным или
-									надземным переходам.</li>
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Указатели помогают
-									пассажирам ориентироваться и находить нужные пути.</li>
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Разработаны удобные
-									расписания с минимальными интервалами между прибытием и отправлением поездов.</li>
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">На вокзалах есть
-									зоны отдыха, кафе и справочные пункты, чтобы сделать пересадку комфортной.</li>
-							</ul>
-						</div>
-					</li>
-					<li class="py-3 md:py-5 px-5 md:px-10 rounded-[20px] md:rounded-[40px]"
-						style="box-shadow: 0px 4px 12px 0px #0000000D;">
-						<div id="faqTop" class="flex items-center justify-between pb-0">
-							<h3 class="font-semibold text-sm md:text-xl leading-5 md:leading-7 text-[#3D4641]">Что такое узел связи?
-							</h3>
-							<button id="faqBtn" class="w-10 h-10 flex items-center justify-center rotate-180"><img
-									src="./images/faq/open-close.svg	" alt="Open and Close"></button>
-						</div>
-						<div id="faqContainer" class="hidden">
-							<p class="font-semibold text-[14px] md:text-[18px] leading-4 md:leading-5 text-[#6F7973]">Узел связи — это
-								оборудование или группа устройств, через которые проходит передача данных в сети. Он может выполнять
-								функции маршрутизации, обработки данных или подключения пользователей.</p>
-							<br>
-							<p class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Пример: базовая
-								станция мобильной связи, маршрутизатор в локальной сети или дата-центр.</p><br>
-							<p class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Узел связи состоит из
-								следующих компонентов:</p>
-							<ul class="list-disc pl-5">
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Маршрутизаторы:
-									определяют оптимальные пути для передачи данных.</li>
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Коммутаторы:
-									соединяют устройства внутри сети.</li>
-								<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Серверы:
-									обрабатывают и хранят данные.</li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-
-				<div
-					class="flex flex-col md:flex-row items-center gap-2.5 justify-between rounded-[20px] md:rounded-[40px] px-5 lg:px-[113px] py-5"
-					style="background: linear-gradient(178.11deg, #43A548 -147.02%, #52E259 286.68%); box-shadow: 0px 4px 12px 0px #0000000D;">
-					<p class="font-semibold text-sm md:text-xl leading-5 md:leading-7 text-white">
-						Переходи в раздел “База Знаний” , что бы получить больше полезной информации
-					</p>
-					<a href="./knowledge-base.html"
-						class="py-3 px-8 w-full md:w-auto text-nowrap bg-[white] text-[#43A548] color rounded-[40px] font-semibold text-base leading-[22px]">База
-						Знаний</a>
+	<section class="md:py-[120px] py-[60px] mb-[90px]">
+		<div class="max-w-[1351px] mx-auto px-5">
+			<h2 class="font-semibold text-xl md:text-[32px] leading-7 md:leading-[44px] text-[#3D4641] mb-8 md:mb-[60px]">
+				Ответы на вопросы</h2>
+			<ul class="grid gap-2.5 md:gap-5 mb-2.5 md:mb-5">
+				<li class="py-3 md:py-5 px-5 md:px-10 rounded-[20px] md:rounded-[40px]"
+					style="box-shadow: 0px 4px 12px 0px #0000000D;">
+					<div id="faqTop" class="flex items-center justify-between pb-0">
+						<h3 class="font-semibold text-sm md:text-xl leading-5 md:leading-7 text-[#3D4641]">Какие бывают типы
+							станций?</h3>
+						<button id="faqBtn" class="w-10 h-10 flex items-center justify-center rotate-180"><img
+								src="./images/faq/open-close.svg	" alt="Open and Close"></button>
+					</div>
+					<div id="faqContainer" class="hidden">
+						<p class="font-semibold text-[14px] md:text-[18px] leading-4 md:leading-5 text-[#6F7973]">Станции делятся
+							на несколько типов в зависимости от их функций:</p>
+						<br>
+						<ul class="list-disc pl-5">
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Пассажирские
+								станции: обслуживают пассажиров. Это могут быть вокзалы в крупных городах или остановочные пункты в
+								небольших населённых пунктах. У них есть залы ожидания, кассы, платформы и другие удобства для
+								пассажиров.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Грузовые станции:
+								занимаются обработкой грузов. Здесь располагаются грузовые терминалы, складские площадки, краны для
+								погрузки/разгрузки вагонов.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Сортировочные
+								станции: предназначены для формирования новых составов. В них вагоны сортируются по назначению и
+								объединяются в составы для отправки в нужные направления.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Технические
+								станции: обеспечивают обслуживание и ремонт подвижного состава, а также заправку топливом, водой и
+								проверку безопасности.</li>
+						</ul>
+					</div>
+				</li>
+				<li class="py-3 md:py-5 px-5 md:px-10 rounded-[20px] md:rounded-[40px]"
+					style="box-shadow: 0px 4px 12px 0px #0000000D;">
+					<div id="faqTop" class="flex items-center justify-between pb-0">
+						<h3 class="font-semibold text-sm md:text-xl leading-5 md:leading-7 text-[#3D4641]">Что такое транспортный
+							узел?</h3>
+						<button id="faqBtn" class="w-10 h-10 flex items-center justify-center rotate-180"><img
+								src="./images/faq/open-close.svg	" alt="Open and Close"></button>
+					</div>
+					<div id="faqContainer" class="hidden">
+						<ul class="list-disc pl-5">
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Транспортный узел —
+								это место, где пересекаются или взаимодействуют несколько видов транспорта (например, железнодорожный,
+								автомобильный, морской, воздушный). Такие узлы играют ключевую роль в логистике, позволяя быстро
+								перераспределять пассажиров и грузы.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Примеры: аэропорт с
+								железнодорожной станцией и автомобильной магистралью, морской порт с подключением к железной дороге и
+								автотранспорту.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Важно, чтобы узел
+								имел развитую инфраструктуру: складские зоны, транспортные терминалы, подъездные пути, что позволяет
+								эффективно управлять потоками грузов и пассажиров.</li>
+						</ul>
+					</div>
+				</li>
+				<li class="py-3 md:py-5 px-5 md:px-10 rounded-[20px] md:rounded-[40px]"
+					style="box-shadow: 0px 4px 12px 0px #0000000D;">
+					<div id="faqTop" class="flex items-center justify-between pb-0">
+						<h3 class="font-semibold text-sm md:text-xl leading-5 md:leading-7 text-[#3D4641]">Как осуществляется
+							управление движением поездов на станции?</h3>
+						<button id="faqBtn" class="w-10 h-10 flex items-center justify-center rotate-180"><img
+								src="./images/faq/open-close.svg	" alt="Open and Close"></button>
+					</div>
+					<div id="faqContainer" class="hidden">
+						<p class="font-semibold text-[14px] md:text-[18px] leading-4 md:leading-5 text-[#6F7973]">Управление
+							движением происходит с использованием современных технологий:</p>
+						<br>
+						<ul class="list-disc pl-5">
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Сигнальные системы:
+								автоматические светофоры показывают машинистам, можно ли двигаться дальше.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Диспетчеризация: на
+								крупных станциях есть диспетчерские пункты, где специалисты следят за движением поездов в реальном
+								времени и координируют их действия.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Автоматизированные
+								системы управления движением (АСУД): такие системы помогают диспетчерам принимать решения быстрее,
+								обрабатывая данные о состоянии путей, графиках поездов и их местоположении.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Радиосвязь:
+								используется для передачи команд между машинистами, диспетчерами и техническими службами.</li>
+						</ul>
+					</div>
+				</li>
+				<li class="py-3 md:py-5 px-5 md:px-10 rounded-[20px] md:rounded-[40px]"
+					style="box-shadow: 0px 4px 12px 0px #0000000D;">
+					<div id="faqTop" class="flex items-center justify-between pb-0">
+						<h3 class="font-semibold text-sm md:text-xl leading-5 md:leading-7 text-[#3D4641]">Что такое узловая
+							станция, и чем она отличается от обычной?</h3>
+						<button id="faqBtn" class="w-10 h-10 flex items-center justify-center rotate-180"><img
+								src="./images/faq/open-close.svg	" alt="Open and Close"></button>
+					</div>
+					<div id="faqContainer" class="hidden">
+						<p class="font-semibold text-[14px] md:text-[18px] leading-4 md:leading-5 text-[#6F7973]">Узловая станция
+							— это железнодорожная станция, через которую проходят линии из нескольких направлений.</p>
+						<br>
+						<p class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Она отличается от
+							обычной тем, что на ней происходит:</p>
+						<ul class="list-disc pl-5">
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">
+								Сортировка вагонов для различных маршрутов.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Пересадка
+								пассажиров между разными поездами.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Перераспределение
+								грузов для дальнейшей доставки.</li>
+						</ul>
+					</div>
+				</li>
+				<li class="py-3 md:py-5 px-5 md:px-10 rounded-[20px] md:rounded-[40px]"
+					style="box-shadow: 0px 4px 12px 0px #0000000D;">
+					<div id="faqTop" class="flex items-center justify-between pb-0">
+						<h3 class="font-semibold text-sm md:text-xl leading-5 md:leading-7 text-[#3D4641]">Как организуется
+							пересадка пассажиров в транспортных узлах?</h3>
+						<button id="faqBtn" class="w-10 h-10 flex items-center justify-center rotate-180"><img
+								src="./images/faq/open-close.svg	" alt="Open and Close"></button>
+					</div>
+					<div id="faqContainer" class="hidden">
+						<p class="font-semibold text-[14px] md:text-[18px] leading-4 md:leading-5 text-[#6F7973]">Пересадка
+							организуется так, чтобы минимизировать время ожидания и сделать процесс удобным:</p>
+						<br>
+						<ul class="list-disc pl-5">
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">На крупных узловых
+								станциях платформы обычно располагаются рядом, а переход между ними осуществляется по подземным или
+								надземным переходам.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Указатели помогают
+								пассажирам ориентироваться и находить нужные пути.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Разработаны удобные
+								расписания с минимальными интервалами между прибытием и отправлением поездов.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">На вокзалах есть
+								зоны отдыха, кафе и справочные пункты, чтобы сделать пересадку комфортной.</li>
+						</ul>
+					</div>
+				</li>
+				<li class="py-3 md:py-5 px-5 md:px-10 rounded-[20px] md:rounded-[40px]"
+					style="box-shadow: 0px 4px 12px 0px #0000000D;">
+					<div id="faqTop" class="flex items-center justify-between pb-0">
+						<h3 class="font-semibold text-sm md:text-xl leading-5 md:leading-7 text-[#3D4641]">Что такое узел связи?
+						</h3>
+						<button id="faqBtn" class="w-10 h-10 flex items-center justify-center rotate-180"><img
+								src="./images/faq/open-close.svg	" alt="Open and Close"></button>
+					</div>
+					<div id="faqContainer" class="hidden">
+						<p class="font-semibold text-[14px] md:text-[18px] leading-4 md:leading-5 text-[#6F7973]">Узел связи — это
+							оборудование или группа устройств, через которые проходит передача данных в сети. Он может выполнять
+							функции маршрутизации, обработки данных или подключения пользователей.</p>
+						<br>
+						<p class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Пример: базовая
+							станция мобильной связи, маршрутизатор в локальной сети или дата-центр.</p><br>
+						<p class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Узел связи состоит из
+							следующих компонентов:</p>
+						<ul class="list-disc pl-5">
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Маршрутизаторы:
+								определяют оптимальные пути для передачи данных.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Коммутаторы:
+								соединяют устройства внутри сети.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Серверы:
+								обрабатывают и хранят данные.</li>
+						</ul>
+					</div>
+				</li>
+				<li class="py-3 md:py-5 px-5 md:px-10 rounded-[20px] md:rounded-[40px]"
+					style="box-shadow: 0px 4px 12px 0px #0000000D;">
+					<div id="faqTop" class="flex items-center justify-between pb-0">
+						<h3 class="font-semibold text-sm md:text-xl leading-5 md:leading-7 text-[#3D4641]">Как рассчитать пикеты на железной дороге?</h3>
+						<button id="faqBtn" class="w-10 h-10 flex items-center justify-center rotate-180"><img
+								src="./images/faq/open-close.svg	" alt="Open and Close"></button>
+					</div>
+					<div id="faqContainer" class="hidden">
+						<p class="font-semibold text-[14px] md:text-[18px] leading-4 md:leading-5 text-[#6F7973]">Пикет — это стандартная единица измерения расстояний на железной дороге, равная 100 метрам. Для расчета пикетов:</p>
+						<br>
+						<ul class="list-disc pl-5">
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Определите общее расстояние между заданными точками в метрах.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Разделите расстояние на 100, чтобы получить число пикетов.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Остаток от деления укажет метры, превышающие целое число пикетов. <br>
+								Пример: Расстояние 2350 метров. Делим 2350 на 100. Получаем 23 пикета и 50 метров.
+								</li>
+						</ul>
+					</div>
+				</li>
+				<li class="py-3 md:py-5 px-5 md:px-10 rounded-[20px] md:rounded-[40px]"
+					style="box-shadow: 0px 4px 12px 0px #0000000D;">
+					<div id="faqTop" class="flex items-center justify-between pb-0">
+						<h3 class="font-semibold text-sm md:text-xl leading-5 md:leading-7 text-[#3D4641]">Как определить расположение светофоров?</h3>
+						<button id="faqBtn" class="w-10 h-10 flex items-center justify-center rotate-180"><img
+								src="./images/faq/open-close.svg	" alt="Open and Close"></button>
+					</div>
+					<div id="faqContainer" class="hidden">
+						<p class="font-semibold text-[14px] md:text-[18px] leading-4 md:leading-5 text-[#6F7973]">Для правильного размещения светофоров учитывайте:</p>
+						<br>
+						<ul class="list-disc pl-5">
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Безопасное расстояние: Светофоры должны размещаться так, чтобы у машиниста было достаточно времени для реакции. Обычно это расстояние рассчитывается исходя из скорости движения и тормозного пути.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Видимость: Убедитесь, что светофор виден с минимального расстояния 400–500 метров.</li>
+							<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Расположение станций и узлов: Светофоры устанавливаются перед входами на станции, путевыми разъездами и другими критическими точками.
+								</li>
+						</ul>
+					</div>
+				</li>
+				<li class="py-3 md:py-5 px-5 md:px-10 rounded-[20px] md:rounded-[40px]"
+				style="box-shadow: 0px 4px 12px 0px #0000000D;">
+				<div id="faqTop" class="flex items-center justify-between pb-0">
+					<h3 class="font-semibold text-sm md:text-xl leading-5 md:leading-7 text-[#3D4641]">Как рассчитать количество столбов для контактной сети?</h3>
+					<button id="faqBtn" class="w-10 h-10 flex items-center justify-center rotate-180"><img
+							src="./images/faq/open-close.svg	" alt="Open and Close"></button>
 				</div>
+				<div id="faqContainer" class="hidden">
+					<ul class="list-disc pl-5">
+						<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Определите длину участка линии: Измерьте расстояние, которое будет покрыто контактной сетью.</li>
+						<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Шаг между столбами: Обычно расстояние между столбами контактной сети составляет 40–50 метров.</li>
+						<li class="font-normal text-xs md:text-[16px] leading-4 md:leading-5 text-[#6F7973]">Формула расчета: Разделите общую длину линии на среднее расстояние между столбами и округлите результат в большую сторону. <br>
+							Пример: Для линии длиной 1000 метров и расстояния между столбами 50 метров потребуется 1000 ÷ 50 = 20 столбов.
+							</li>
+					</ul>
+				</div>
+			</li>
+			</ul>
+
+			<div
+				class="flex flex-col md:flex-row items-center gap-2.5 justify-between rounded-[20px] md:rounded-[40px] px-5 lg:px-[113px] py-5"
+				style="background: linear-gradient(178.11deg, #43A548 -147.02%, #52E259 286.68%); box-shadow: 0px 4px 12px 0px #0000000D;">
+				<p class="font-semibold text-sm md:text-xl leading-5 md:leading-7 text-white">
+					Переходи в раздел “База Знаний” , что бы получить больше полезной информации
+				</p>
+				<a href="./knowledge-base.html"
+					class="py-3 px-8 w-full md:w-auto text-nowrap bg-[white] text-[#43A548] color rounded-[40px] font-semibold text-base leading-[22px]">База
+					Знаний</a>
 			</div>
-		</section>
+		</div>
+	</section>
 	</main>
 
 	<footer class="bg-[#2C2B35] pt-10 pb-5">
@@ -456,6 +517,8 @@
 			</div>
 		</div>
 	</footer>
+
+	<script src="./js/script.js"></script>
 </body>
 
 </html>

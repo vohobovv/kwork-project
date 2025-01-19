@@ -11,7 +11,7 @@ btn.forEach(function (item, index) {
 	})
 })
 
-
+/*
 if (document.querySelector('#formOpenBtn')) {
 	let formBtn = document.querySelector('#formCloseBtn');
 	let formOpenBtn = document.querySelector('#formOpenBtn');
@@ -44,4 +44,18 @@ if (document.querySelector('#formOpenBtn')) {
 	});
 } else {
 	console.log("Elements not found!");
-}
+} */
+
+
+const hamburger = document.querySelector(".hamburger")
+const navMenu = document.querySelector(".nav-menu")
+
+hamburger.addEventListener("click", () => {
+	hamburger.classList.toggle("active")
+	navMenu.classList.toggle("active")
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+	hamburger.classList.remove("active")
+	navMenu.classList.remove("active")
+}))

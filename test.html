@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./hamburger.css">
 	<link rel="stylesheet" href="./style.css">
 	<link rel="stylesheet" href="./test.css">
 	<script src="https://cdn.tailwindcss.com"></script>
@@ -12,31 +13,38 @@
 
 <body>
 
-	<header style="box-shadow: 0px 4px 24.2px 0px #0000000F;" class="pt-5 lg:pt-6 pb-5 lg:pb-6" id="header">
-		<div class="max-w-[1312px] ml-auto mr-auto flex items-center pl-4 pr-4">
-			<a href="./index.html" class="flex items-center font-bold text-[18px] leading-3">
-				<img class="max-w-[70px] lg:max-w-[100px]" src="./images/header/logo.png" alt="header logo"> Станции и Узлы
+	<header style="box-shadow: 0px 4px 24.2px 0px #0000000F;" class="bg-white pt-5 lg:pt-6 pb-5 lg:pb-6" id="header">
+		<nav class="navbar max-w-[1312px] ml-auto mr-auto flex items-center pl-4 pr-4">
+			<a href="./index.html" class="nav-branding flex items-center font-bold text-[18px] leading-3">
+				<img class="max-w-[70px] md:max-w-[100px]" src="./images/header/logo.png" alt="header logo"> Станции и Узлы
 			</a>
 
-			<ul class="hidden lg:flex gap-12 ml-auto ">
-				<li><a class="list-header font-semibold text-sm leading-5 text-black" href="./stations.html">Станции </a></li>
-				<li><a class="list-header font-semibold text-sm leading-5 text-black" href="./uzli.html">Узлы </a>
+			<ul class="nav-menu">
+				<li class="nav-item"><a class="nav-link font-semibold text-sm leading-5 text-[#2c2b35]" href="./stations.html">Станции </a>
 				</li>
-				<li><a class="list-header font-semibold text-sm leading-5 text-black" href="./knowledge-base.html">База
+				<li class="nav-item"><a class="nav-link font-semibold text-sm leading-5 text-[#2c2b35]" href="./uzli.html">Узлы </a>
+				</li>
+				<li class="nav-item"><a class="nav-link font-semibold text-sm leading-5 text-[#2c2b35]" href="./knowledge-base.html">База
 						знаний</a></li>
-				<li><a class="list-header font-semibold text-sm leading-5 text-black" href="./test.html">Тест</a></li>
+				<li class="nav-item"><a class="nav-link font-semibold text-sm leading-5 text-[#2c2b35]" href="./test.html">Тест</a></li>
 			</ul>
-		</div>
+
+				<div class="hamburger">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+		</nav>
 	</header>
 
 
 	<main>
 		<section class="mb-[150px]">
 			<div id="container">
-				<h1 class="text-white font-semibold leading-4 text-[25px] text-center mb-[30px] pt-[50px]">Если вы уже прочитали наши
+				<h1 class="text-white font-semibold leading-2 md:leading-4 text-[18px] md:text-[25px] text-center mb-[24px] md:mb-[30px] pt-[50px]">Если вы уже прочитали наши
 					страницы то можете решить тест по теме "Станции и
 					Узлы"</h1>
-				<h2 class="text-white font-semibold leading-4 text-[25px] text-center mb-[30px]">Пожалуйста, нажмите на кнопку
+				<h2 class="text-white font-semibold leading-2 md:leading-4 text-[18px] md:text-[25px] text-center mb-[24px] md:mb-[30px]">Пожалуйста, нажмите на кнопку
 					ниже, чтобы открыть тест. Удачи!</h2>
 				<div class="flex justify-center items-center">
 					<a id="start"
@@ -140,6 +148,7 @@
 	</footer>
 
 	<script src="./js/test.js"></script>
+	<script src="./js/script.js"></script>
 </body>
 
 </html>
